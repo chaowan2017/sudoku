@@ -59,3 +59,10 @@ def print_answers(board):
 		
 Board = make_board()
 print_board(Board)
+
+def is_full(challange, m = 3 ):
+	for i,j in itertools.product(range(m**2), repeat= 2):
+		if challange[i][j] is None:
+			return False
+	return True
+
